@@ -1,21 +1,114 @@
 <!doctype html>
-<html>
-    <head>
-        <title>Yadirect</title>
-        <meta charset="utf-8"/>
-        <link rel="icon" type="image/x-icon" href="favicon.svg">
-        <link href="style.css" rel="stylesheet"/>
-    </head>
-    <body>
-        <div class="container">
-            <a href="https://github.com/flameshikari/yadirect">
-                <span class="title">
-                    <font color="ff0000">Y</font><font color="ffffff">adirect</font>
-                </span>
-            </a>
-            <input autofocus id="text" type="text" placeholder="https://disk.yandex.ru/...">
-            <span class="note"></span>
-        </div>
-        <script src="script.js"></script>
-    </body>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akonami.org</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+
+    <!-- Bootstrap 5 CSS (no “jumbotron” class in v5) -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Optional: your own style.css (if you still need additional styles) -->
+    <link href="style.css" rel="stylesheet" />
+
+    <style>
+      /* -------------------------
+         Global Reset / Base Styles
+         ------------------------- */
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+
+      body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #222;
+        color: #fff;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: underline;
+      }
+      a:hover {
+        color: #f0ad4e;
+      }
+
+      /* -------------------------
+         “Hero” Section (replaces old jumbotron)
+         ------------------------- */
+      .hero {
+        background: linear-gradient(to right, #343a40, #0d6efd);
+        padding: 3rem 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .hero h1 {
+        font-weight: bold;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+      .hero h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .hero h5 {
+        font-size: 1rem;
+        margin: 0;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 576px) {
+        .hero {
+          padding: 2rem 1rem;
+        }
+        .hero h1 {
+          font-size: 2rem;
+        }
+        .hero h3 {
+          font-size: 1.25rem;
+        }
+        .hero h5 {
+          font-size: 0.9rem;
+        }
+      }
+    </style>
+</head>
+
+<body>
+  <!-- English Section -->
+  <div class="container mt-5">
+    <section class="hero text-white">
+      <h1>Hello!</h1>
+      <h3>
+        This is the file uploading center of
+        <a href="https://www.akonami.org/" target="_blank" rel="noopener">Akonami.org</a>
+      </h3>
+      <h5>There's nothing here to do.</h5>
+    </section>
+  </div>
+
+  <!-- Arabic Section -->
+  <div class="container mt-5" dir="rtl" lang="ar">
+    <section class="hero text-white">
+      <h1>مرحبًا!</h1>
+      <h3>
+        هنا مركز الرفع الخاص بموقع
+        <a href="https://www.akonami.org/" target="_blank" rel="noopener">اكونامي</a>
+      </h3>
+      <h5>لا يوجد شيء لفعله هنا.</h5>
+    </section>
+  </div>
+</body>
 </html>
