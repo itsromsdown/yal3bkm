@@ -9,7 +9,12 @@ import NodeFetchCache, { MemoryCache } from 'node-fetch-cache';
 
 const app = express();
 const router = express.Router();
-const port = 3000;
+const port = process.env.PORT || 3000;
+// (Optional) Simple ping endpoint for external monitors:
+router.get('/ping', (req, res) => {
+  return res.send('pong');
+});
+
 const fetch = NodeFetchCache.create({
     cache: new MemoryCache({ ttl: 60000 }),
     shouldCacheResponse: (response) => response.ok,
