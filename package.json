@@ -1,8 +1,8 @@
 {
-  "name": "yakonami",
+  "name": "yadirect",
   "version": "1.0.0",
   "type": "module",
-  "author": "itsromsdown",
+  "author": "flameshikari",
   "license": "MIT",
   "scripts": {
     "start": "node src/index.js",
