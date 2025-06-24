@@ -21,10 +21,9 @@ const fetch = NodeFetchCache.create({
 });
 
 
-router.get(/([di])\/(\w+)\/?(.*)?/, async (req, res, next) => {
+router.get(/([di])\/([A-Za-z0-9_-]+)\/?(.*)?/, async (req, res, next) => {
     try {
-        const regexp = /([di])\/(\w+)\/?(.*)?/;
-        const match = req.originalUrl.match(regexp);
+        const match = req.originalUrl.match(/([di])\/([A-Za-z0-9_-]+)\/?(.*)?/);
         const type = match[1];
         const hash = match[2];
         const path = match[3] ? `path=/${match[3]}&` : '';
